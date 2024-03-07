@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Location Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/Style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../CSS/Images/location_logo.png"
+            class="location-logo"
+            alt="location logo"
+          />Current Location Tracker
+        </a>
+        <button
+          style="background-color: white"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./main.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./map.html"></a>
+            </li>
+          </ul>
+          <span class="navbar-text"
+            ><a
+              href="#about Modal"
+              class="ms-auto nav-link aboutModal"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutModal"
+              >About</a
+            >
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="divContainer container-fluid">
+      <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+          <iframe
+            data-src="./map.html"
+            id="mapIframe"
+            title="Iframe Example"
+          ></iframe>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 otherDetails">
+          <div class="card detailsCard">
+            <div class="card-header">Current location details</div>
+            <div class="card-body">
+              <h6 id="latitude">Latitude:</h6>
+              <h6 id="longitude">Longitude:</h6>
+            </div>
+          </div>
+          <div class="card savedDetails">
+            <div class="card-header">
+              Saved location details
+              <i
+                class="fa fa-refresh refresh"
+                onclick="refresh()"
+                aria-hidden="true"
+              ></i>
+            </div>
+            <div class="card-body">
+              <div class="detailsDiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title genderModalLabel" id="exampleModalLabel">
+                Just for user experience
+              </h5>
+            </div>
+            <div class="modal-body">
+              <div>
+                <div class="mb-3">
+                  <label for="inputGender" class="form-label genderLabel"
+                    >Enter your gender</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    onkeypress="inputChange()"
+                    id="inputGender"
+                    aria-describedby="emailHelp"
+                  />
+                  <span id="wrongInput"
+                    >you have entered wrong input (enter male or female)</span
+                  >
+                </div>
+                <button
+                  type="submit"
+                  id="closemodal"
+                  onclick="gendervalidation()"
+                  class="btn btn-primary"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="aboutModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">About</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Developed with 💝 by Anju Priya V</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+
+    <script defer src="../src/Script.js"></script>
+    <script defer src="../dist/bundle.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module">
+      window.onload = () => {
+        $("#myModal").modal("show");
+      };
+    </script>
+  </body>
+</html>

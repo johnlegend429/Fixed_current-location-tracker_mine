@@ -1,0 +1,221 @@
+.location-logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 7px;
+}
+.navbar {
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+.navbar-brand {
+  color: white !important;
+  font-size: 1.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.nav-link {
+  color: white !important;
+}
+.navbar-nav {
+  margin-left: 1em;
+}
+.navbar-brand img {
+  margin-right: 0.3em;
+}
+.divContainer {
+  height: auto;
+}
+#mapIframe {
+  height: 700px;
+  width: 100%;
+}
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.modal-backdrop {
+  opacity: 1 !important;
+}
+#wrongInput {
+  color: red;
+  display: none;
+}
+.otherDetails {
+  padding-top: 1em;
+  padding-right: 1.5em;
+}
+.detailsCard {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  text-align: center;
+}
+.savedDetails {
+  z-index: 1;
+  margin-top: 1em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  text-align: center;
+}
+.savedDetails i {
+  margin-left: 1em;
+  cursor: pointer;
+}
+.detailsDiv {
+  margin: 0;
+  padding: 0;
+  height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.aboutModal {
+  color: white !important;
+  text-decoration: none;
+  margin-right: 1em;
+}
+.savedCard {
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+@media (min-width: 0px) and (max-width: 240px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .location-logo {
+    display: none;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 0.7em;
+  }
+  .otherDetails {
+    margin-left: 0.2em;
+  }
+  .genderModalLabel {
+    font-size: 1em;
+  }
+  .genderLabel {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 241px) and (max-width: 280px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .location-logo {
+    display: none;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 0.9em;
+  }
+
+  .otherDetails {
+    margin-left: 0.3em;
+  }
+  .genderModalLabel {
+    font-size: 1em;
+  }
+  .genderLabel {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 720px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .location-logo {
+    display: none;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 0.9em;
+  }
+
+  .otherDetails {
+    margin-left: 0.3em;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+  .location-logo {
+    display: inline-block;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 1em;
+  }
+  #mapIframe {
+    height: 600px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 384px) {
+  .location-logo {
+    display: inline-block;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 1.2em;
+  }
+  #mapIframe {
+    height: 600px;
+  }
+}
+
+@media (min-width: 385px) and (max-width: 414px) {
+  .location-logo {
+    display: inline-block;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 1.3em;
+  }
+  #mapIframe {
+    height: 600px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 480px) {
+  .location-logo {
+    display: inline-block;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 1.3em;
+  }
+  #mapIframe {
+    height: 600px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+  .location-logo {
+    display: inline-block;
+  }
+  .navbar-brand {
+    margin-bottom: 1px !important;
+    font-size: 1.3em;
+  }
+  #mapIframe {
+    height: 600px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .savedCard h6 {
+    font-size: 13px;
+  }
+  #mapIframe {
+    height: 580px;
+  }
+}

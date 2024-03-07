@@ -1,0 +1,88 @@
+#map {
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sendLocation {
+  position: absolute;
+  top: 80%;
+  left: 82%;
+  z-index: 1;
+  padding: 0.7em;
+}
+@media (min-width: 0px) and (max-width: 240px) {
+  .sendLocation {
+    position: absolute;
+    left: 25%;
+    top: 75%;
+    padding: 0.4em;
+  }
+}
+@media (min-width: 241px) and (max-width: 280px) {
+  .sendLocation {
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 281px) and (max-width: 320px) {
+  .sendLocation {
+    position: absolute;
+    left: 43%;
+    top: 75%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 321px) and (max-width: 384px) {
+  .sendLocation {
+    position: absolute;
+    left: 48%;
+    top: 85%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 385px) and (max-width: 414px) {
+  .sendLocation {
+    position: absolute;
+    left: 55%;
+    top: 85%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 415px) and (max-width: 480px) {
+  .sendLocation {
+    position: absolute;
+    left: 59%;
+    top: 85%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 481px) and (max-width: 600px) {
+  .sendLocation {
+    position: absolute;
+    left: 65%;
+    top: 85%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .sendLocation {
+    position: absolute;
+    left: 73%;
+    top: 85%;
+    padding: 0.6em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .sendLocation {
+    position: absolute;
+    left: 78%;
+    top: 85%;
+    padding: 0.6em;
+  }
+}
